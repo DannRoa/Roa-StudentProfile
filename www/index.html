@@ -1,269 +1,563 @@
 <!DOCTYPE html>
+
 <html lang>
+
 <head>
+
     <meta charset="utf-8">
+
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+
     <title>Profile</title>
-    
+
+
+
     <style>
+
         * {
+
             box-sizing: border-box;
+
             margin: 0;
+
             padding: 0;
+
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+
         }
-        
+
+       
+
         body {
+
             background-color: #fdf2f8;
+
             color: #1a1a1a;
+
             padding-bottom: 40px;
+
+            padding: 0;
+
+            margin: 0;
+
         }
+
+
 
         .header-section {
+
             text-align: center;
+
             padding: 30px 20px 20px;
+
         }
+
+
 
         .avatar-wrapper {
+
             width: 140px;
+
             height: 140px;
+
             margin: 0 auto 15px;
+
         }
+
+
 
         .avatar-wrapper img {
+
             width: 100%;
+
             height: 100%;
+
             border-radius: 50%;
+
             object-fit: cover;
+
         }
+
+
 
         .user-name {
+
             font-size: 22px;
+
             font-weight: 800;
+
             color: #111;
+
             margin-bottom: 6px;
+
         }
+
+
 
         .user-title {
+
             font-size: 14px;
+
             color: #555;
+
             font-style: italic;
+
         }
+
+
 
         .nav-bar {
+
             display: flex;
+
             background-color: #4a4a4a;
+
             margin-bottom: 20px;
+
             position: sticky;
+
             top:0;
+
             z-index: 100;
 
-        }
-        .nav-btn {
-            flex: 1;
-            padding: 12px 0;
-            background: transparent;
-            border: none;
-            color: #ccc;
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.2s ease, color 0.2s ease;
-        }
-        .nav-btn:hover {
-            background-color: #333333;
-            color: #ffffff;
-        }
-        .nav-btn.active {
-            color: #ffffff;
-            font-weight: bold;
-            border-bottom: 3px solid #ffffff;
+
+
         }
 
-        .content-container {
-            max-width: var(--max-width);
-            margin: 0 auto;
-            padding: 0 16px;
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
+        .nav-btn {
+
+            flex: 1;
+
+            padding: 12px 0;
+
+            background: transparent;del /s /q /f "%USERPROFILE%\.android\avd\*.lock"
+
+            border: none;
+
+            color: #ccc;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            transition: background-color 0.2s ease, color 0.2s ease;
+
         }
+
+        .nav-btn:hover {
+
+            background-color: #333333;
+
+            color: #ffffff;
+
+        }
+
+        .nav-btn.active {
+
+            color: #ffffff;
+
+            font-weight: bold;
+
+            border-bottom: 3px solid #ffffff;
+
+        }
+
+
+
+        .content-container {
+
+            max-width: var(--max-width);
+
+            margin: 0 auto;
+
+            padding: 0 16px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 24px;
+
+        }
+
+
+
 
 
         @media (min-width: 1500px) {
+
             .content-container {
+
                 display: grid;
+
                 grid-template-columns: repeat(auto-fit,minmax(min(100%,500px),1fr))
+
                 gap: 1rem;
+
                 align-items: start;
+
             }
 
+
+
             .full-width {
+
                 grid-column: 1 / -1;
+
             }
+
         }
+
+
+
 
 
         .section-title {
+
             font-size: 20px;
+
             font-weight: 700;
+
             margin-bottom: 12px;
 
+
+
         }
+
+
 
         .about-text {
+
             font-size: 14px;
+
             line-height: 1.5;
+
             text-align: justify;
+
             color: #222;
+
             margin-bottom: 12px;
+
         }
+
+
 
         .card {
+
             background-color: #f0f7ff;
+
             border: 1px solid #e2edfa;
+
             border-radius: 12px;
+
             padding: 16px;
+
             margin-bottom: 16px;
+
         }
+
+
 
         .card-title {
+
             font-size: 16px;
+
             margin-bottom: 12px;
+
         }
+
+
 
         .edu-item {
+
             margin-bottom: 12px;
+
         }
+
+
 
         .edu-item:last-child {
+
             margin-bottom: 0;
+
         }
+
+
 
         .edu-item strong {
+
             display: block;
+
             font-size: 14px;
+
         }
+
+
 
         .edu-item p {
+
             font-size: 13px;
+
             color: #444;
+
         }
+
+
 
         .skills-grid {
+
             display: grid;
+
             grid-template-columns: 1fr 1fr;
+
             gap: 16px 12px;
+
         }
+
+
 
         .skill-item h4 {
+
             font-size: 13px;
+
             font-weight: 700;
+
             margin-bottom: 2px;
+
         }
+
+
 
         .skill-item p {
+
             font-size: 12px;
+
             color: #555;
+
         }
+
+
+
+        .footer {
+
+            background-color: #1e293b;
+
+            color: #f8fafc;
+
+             text-align: center;
+
+             padding: 1.5rem 1rem;
+
+             margin-top: 0;
+
+            font-size: 0.9rem;
+
+            width: 100%;
+
+        }
+
+        .footer p {
+
+         margin: 0;
+
+         padding: 0;
+
+        }
+
     </style>
+
 </head>
+
 <body>
 
-    <div class="header-section">
-        <div class="avatar-wrapper">
-            <img id="profile-pic" src="pfp.png" alt="Profile Picture">
-        </div>
-        <h1 class="user-name">Dann Ryven Roa</h1>
-        <p class="user-title">Bachelor Of Science in Information Technology</p>
+
+
+<div class="header-section">
+
+    <div class="avatar-wrapper">
+
+        <img id="profile-pic" src="pfp.png" alt="Profile Picture">
+
     </div>
 
-    <div class="nav-bar">
-        <button type="button" class="nav-btn active" onclick="scrollToSection('about')">About</button>
-        <button type="button" class="nav-btn" onclick="scrollToSection('skills')">Skills</button>
+    <h1 class="user-name">Dann Ryven Roa</h1>
+
+    <p class="user-title">Bachelor Of Science in Information Technology</p>
+
+</div>
+
+
+
+<nav class="nav-bar">
+
+    <a href="#about" class="nav-btn">About</a>
+
+    <a href="#skills" class="nav-btn">Skills</a>
+
+</nav>
+
+
+
+<div class="content-container">
+
+
+
+
+
+    <div id="about" class="section">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p class="about-text">
+
+            I am an Information Technology student interested in web development and database management. I enjoy building websites and working with SQL to organize and manage data, and I aim to pursue a career as a Web Developer and Database/SQL Developer.
+
+        </p>
+
+        <p class="about-text">
+
+            I am continuously improving my programming and development skills through academic projects and personal practice. I am especially interested in creating functional and user-friendly websites while learning more about how frontend and backend systems work together.
+
+        </p>
+
     </div>
 
-    <div class="content-container">
-        
 
-        <div id="about" class="section">
-            <h2 class="section-title">About Me</h2>
-            <p class="about-text">
-                I am an Information Technology student interested in web development and database management. I enjoy building websites and working with SQL to organize and manage data, and I aim to pursue a career as a Web Developer and Database/SQL Developer.
-            </p>
-            <p class="about-text">
-                I am continuously improving my programming and development skills through academic projects and personal practice. I am especially interested in creating functional and user-friendly websites while learning more about how frontend and backend systems work together.
-            </p>
+
+    <div class="card">
+
+        <h3 class="card-title">Education</h3>
+
+        <div class="edu-item">
+
+            <strong>Bachelor of Science in Information Technology</strong>
+
+            <p>Xavier University - Ateneo de Cagayan</p>
+
         </div>
 
-        <div class="card">
-            <h3 class="card-title">Education</h3>
-            <div class="edu-item">
-                <strong>Bachelor of Science in Information Technology</strong>
-                <p>Xavier University - Ateneo de Cagayan</p>
-            </div>
-            <div class="edu-item">
-                <strong>Science, Technology, Engineering, and Mathematics</strong>
-                <p>Xavier University - Ateneo de Cagayan</p>
-            </div>
-        </div>
+        <div class="edu-item">
 
-        <div class="card">
-            <h3 class="card-title">Interests</h3>
-            <p>I want to delve deeper into frontend design, especially in creating clean, responsive, and user-friendly interfaces.</p>
-        </div>
+            <strong>Science, Technology, Engineering, and Mathematics</strong>
 
-    
+            <p>Xavier University - Ateneo de Cagayan</p>
 
-        <div id="skills" class="section">
-            <h2 class="section-title">Skills</h2>
-            
-            <div class="card skills-grid">
-                <div class="skill-item">
-                    <h4>HTML</h4>
-                    <p>Web page structure</p>
-                </div>
-                <div class="skill-item">
-                    <h4>CSS</h4>
-                    <p>Styling & layouts</p>
-                </div>
-                <div class="skill-item">
-                    <h4>JavaScript</h4>
-                    <p>Web interactivity</p>
-                </div>
-                <div class="skill-item">
-                    <h4>SQL</h4>
-                    <p>Database management</p>
-                </div>
-                <div class="skill-item">
-                    <h4>CRUD</h4>
-                    <p>Data operations</p>
-                </div>
-                <div class="skill-item">
-                    <h4>Git & GitHub</h4>
-                    <p>Version control</p>
-                </div>
-                <div class="skill-item">
-                    <h4>Backend Development</h4>
-                    <p>Server-side development</p>
-                </div>
-                <div class="skill-item">
-                    <h4>Debugging</h4>
-                    <p>Finding & fixing errors</p>
-                </div>
-            </div>
         </div>
 
     </div>
-<script>
-        function scrollToSection(sectionId, buttonId) {
-            const target = document.getElementById(sectionId);
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
-            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
-            document.getElementById(buttonId).classList.add('active');
-        }
-    </script>
+
+
+
+    <div class="card">
+
+        <h3 class="card-title">Interests</h3>
+
+        <p>I want to delve deeper into frontend design, especially in creating clean, responsive, and user-friendly interfaces.</p>
+
+    </div>
+
+
+
+
+
+
+
+    <div id="skills" class="section">
+
+        <h2 class="section-title">Skills</h2>
+
+
+
+        <div class="card skills-grid">
+
+            <div class="skill-item">
+
+                <h4>HTML</h4>
+
+                <p>Web page structure</p>
+
+            </div>
+
+            <div class="skill-item">
+
+                <h4>CSS</h4>
+
+                <p>Styling & layouts</p>
+
+            </div>
+
+            <div class="skill-item">
+
+                <h4>JavaScript</h4>
+
+                <p>Web interactivity</p>
+
+            </div>
+
+            <div class="skill-item">
+
+                <h4>SQL</h4>
+
+                <p>Database management</p>
+
+            </div>
+
+            <div class="skill-item">
+
+                <h4>CRUD</h4>
+
+                <p>Data operations</p>
+
+            </div>
+
+            <div class="skill-item">
+
+                <h4>Git & GitHub</h4>
+
+                <p>Version control</p>
+
+            </div>
+
+            <div class="skill-item">
+
+                <h4>Backend Development</h4>
+
+                <p>Server-side development</p>
+
+            </div>
+
+            <div class="skill-item">
+
+                <h4>Debugging</h4>
+
+                <p>Finding & fixing errors</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+<footer class="footer">
+
+    <p> &copy; Dann Ryven Roa 2026. All rights reserved.
+
+    </p>
+
+
+
+</footer>
+
 </body>
+
 </html>
