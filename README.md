@@ -50,7 +50,7 @@ Launch the App
 **I didn't have enough storage(PC) to download the Tablet and Desktop emulator in Android Studio, so I just ran it on Mobile Simulator :<**
 
 #### Mobile 
-![Mobile Layout](./www/screenshots/roa_phone.png)
+![Mobile Layout](./www/screenshots/roa_cellsphone.png)
 
 #### Tablet 
 ![Tablet Layout](./www/screenshots/roa_tablet.png)
