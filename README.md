@@ -1,4 +1,4 @@
-# Student Profile Application ROA ITCC 41 A
+git# Student Profile Application ROA ITCC 41 A
 
 ## Project Description 
 
@@ -50,11 +50,11 @@ Launch the App
 **I didn't have enough storage(PC) to download the Tablet and Desktop emulator in Android Studio, so I just ran it on Mobile Simulator :<**
 
 #### Mobile 
-![Mobile Layout](./www/screenshots/roa_cellphone.png)
+![Mobile Layout](./www/screenshots/roa_phone.png)
 
 #### Tablet 
-![Tablet Layout](./www/screenshots/roa_cellphone.png)
+![Tablet Layout](./www/screenshots/roa_tablet.png)
 
 #### Desktop
-![Desktop Layout](./www/screenshots/roa_cellphone.png)
+![Desktop Layout](./www/screenshots/roa_desktop.png)
 
