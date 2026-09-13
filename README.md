@@ -25,7 +25,7 @@ I applied @media (min-width: 1500px) rules to switch my layout from a stacked si
 ### Screenshots
 
 ### Profile Page
-![Profile Page](www/screenshots/profile.png)
+![Profile Page](www/screenshots/Profile.png)
 
 ### About Page
 ![About Page](www/screenshots/About.png)
