@@ -1,60 +1,62 @@
-## Student Profile Application ROA ITCC 41 A
+# Multi-Page Student Profile Application
 
-## Project Description 
+## 1. Project Description
+This is my expanded multi-page student profile. Here, you can now move easily from page to page. Instead of putting all my information at one page, you can now navigate more from the website, now it's easy to use.
 
-**This is a mobile-friendly Student Profile application built with HTML and CSS for ITCC 41 Mobile Development. It highlights my personal background, interests, and technical skills as a 3rd-year IT student.**
+## 2. Application Pages
+- **Profile (index.html):** This is my primary homepage. It features my profile picture, name, introductory bio, and primary navigation.
+- **About (about.html):** Displays my full personal background, educational achievements at Xavier University – Ateneo de Cagayan, and career goals.
+- **Skills (skills.html):** This highlights my technical skills.
+- **Projects (projects.html):** It features my three completed projects, including SeekGeek, StreamLine X, and an MVC Calculator.
+- **Contact (contact.html):** This contains all my contact info including a link to my GitHub and social medias.
 
-## Application Structure
-**Header**: Displays my profile, name, and course.
-**Navigation Menu**: Quick tap options (About and Skills)
-**About Section**: My introduction, short bio, educational background and personal interests.  
-**Skills Section**: My lists of technical skills and programming languages.  
-**Footer**: Displays copyright.
+## 3. Navigation
+Navigation is handled using HTML hyperlink tags (`<a href="...">`). This allows all five pages to traverse between screens without relying on JavaScript.
 
-## Responsive Design
-I applied @media (min-width: 1500px) rules to switch my layout from a stacked single column into a multi-column desktop grid for wider displays.
+## 4. Responsive Design
+I applied @media (min-width: 1500px) rules to switch my layout from a stacked single column into a multi-column desktop grid for wider displays. I also included the meta viewport tag (width=device-width, initial-scale=1) to adjust scaling properly on mobile browsers.
 
-I included the meta viewport tag (width=device-width, initial-scale=1) to adjust scaling properly on mobile browsers.
+## 5. UI/UX Principles Applied
+- **Consistency:** Uniform typography, button states, and spacing models.
+- **Visual Hierarchy:** Distinct headings and structured container cards.
+- **Usability & Accessibility:** Active page navigation, clear link targets and semantic structural tags.
 
-## UI/UX Principles
-**Responsive Layout**: I stacked elements in a single column on mobile screens and automatically switch to side-by-side grids on wider desktop screens.  
-**Mobile-Friendly Spacing**: I used flexible padding and gap spacing so content is easy to tap.
-**Appropriate Typography**: I used clean system fonts with readable text sizes so every section is easy to read.  
-**Clear Visual Hierarchy**: I made key titles pop using bold text sizes and light blue cards to group related details clearly.  
-**Usable Controls**: I highlighted navigation buttons smoothly when hovered over so users know what they are clicking.  
-**Basic Accessibility**: I used clear HTML labels and descriptive image tags so screen readers can easily read my content.  
-**Consistent Design**: I kept a uniform look across the app using soft backgrounds, dark footers, and matching rounded cards. 
 
-## Navigation
-I used <a=href> to allow users to jump directly between my About and Skills sections.
+### Screenshots
 
-## Steps to execute
-Open command prompt inside your project folder and run:
+### Profile Page
+![Profile Page](www/screenshots/profile.png)
+
+### About Page
+![About Page](www/screenshots/About.png)
+
+### Skills Page
+![Skills Page](www/screenshots/Skills.png)
+
+### Projects Page
+![Project Page](www/screenshots/Projects.png)
+
+### Contacts Page
+![Contacts Page](www/screenshots/Contacts.png)
+
+### Tablet
+![Contacts Page](www/screenshots/tabletmulti.png)
+
+### Desktop
+![Contacts Page](www/screenshots/desktopmulti.png)
+
+## 6. How to Build & Run
+```bash
+
+npm install -g cordova
 
 cordova platform add android
+
 cordova build android
 
-Step 2: Open the Project in Android Studio
-Navigate to your project folder
+cordova emulate android
 
-Step 3: Run the Application
+#to run in android studio (if not open)
+npx server
 
-Set Up a Virtual Device (Emulator):
-
-Select a phone model and click next.
-
-Launch the App
-
-### Screenshots 
-
-**I didn't have enough storage(PC) to download the Tablet and Desktop emulator in Android Studio, so I just ran it on Mobile Simulator :<**
-
-#### Mobile 
-![Mobile Layout](./www/screenshots/roa_cellsphone.png)
-
-#### Tablet 
-![Tablet Layout](./www/screenshots/roa_tablet.png)
-
-#### Desktop
-![Desktop Layout](./www/screenshots/roa_desktop.png)
-
+#open either local or network !!

@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+    background-color: #fdf2f8;
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header-section {
+    text-align: center;
+    padding: 30px 20px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0e0ea;
+}
+
+.avatar-wrapper {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 15px;
+}
+
+.avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4a4a4a;
+}
+
+.user-name {
+    font-size: 22px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 6px;
+}
+
+.user-title {
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+}
+
+.nav-bar {
+    display: flex;
+    background-color: #4a4a4a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-btn {
+    flex: 1;
+    padding: 14px 0;
+    color: #ccc;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-btn:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.nav-btn.active {
+    color: #ffffff;
+    font-weight: bold;
+    border-bottom: 3px solid #ffffff;
+    background-color: #333333;
+}
+
+
+.content-container {
+    max-width: 900px;
+    width: 100%;
+    margin: 24px auto;
+    padding: 0 16px;
+    flex: 1;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #111;
+    border-bottom: 2px solid #e2edfa;
+    padding-bottom: 8px;
+}
+
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e2edfa;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #1e293b;
+}
+
+.body-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 14px;
+}
+
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.skill-card {
+    background-color: #f0f7ff;
+    border: 1px solid #d0e2f7;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.skill-card h4 {
+    font-size: 16px;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.skill-card p {
+    font-size: 13px;
+    color: #475569;
+    line-height: 1.4;
+}
+
+
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-tag {
+    display: inline-block;
+    background-color: #e0f2fe;
+    color: #0369a1;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 6px;
+    margin-top: 6px;
+}
+
+
+.contact-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.contact-list li {
+    font-size: 14px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-list a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.submit-btn {
+    background-color: #4a4a4a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.footer {
+    background-color: #1e293b;
+    color: #f8fafc;
+    text-align: center;
+    padding: 1.2rem 1rem;
+    font-size: 0.85rem;
+    margin-top: auto;
+}
+
+
+@media (max-width: 600px) {
+    .nav-btn {
+        font-size: 11px;
+        padding: 10px 0;
+    }
+    .user-name {
+        font-size: 18px;
+    }
+}
