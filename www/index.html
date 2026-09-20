@@ -2,40 +2,118 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-    <title> Dann Ryven Carl Roa - Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="header-section">
-    <div class="avatar-wrapper">
-        <img src="img/pfp.png" alt="Dann Ryven Roa Profile Picture">
+    <aside class="sidebar">
+        <div class="brand-section">
+            <span>My Student Profile</span>
+        </div>
+
+        <nav class="nav-bar">
+            <a href="index.html" class="nav-btn active">Profile</a>
+            <a href="about.html" class="nav-btn">About</a>
+            <a href="skills.html" class="nav-btn">Skills</a>
+            <a href="projects.html" class="nav-btn">Projects</a>
+            <a href="contact.html" class="nav-btn">Contact</a>
+        </nav>
+    </aside>
+
+    <div class="main-wrapper">
+        <main class="content-container">
+
+            <div id="profile-view-mode">
+                <div class="page-header">
+                    <h2 class="page-title">Student Profile</h2>
+                    <button class="btn btn-primary" onclick="openEditMode()">Edit Profile</button>
+                </div>
+
+                <div class="card">
+                    <div class="profile-header-display">
+                        <img src="img/pfp.png" alt="Profile Picture" class="profile-avatar" onerror="this.src='https://via.placeholder.com/90'">
+                        <div class="profile-title-text">
+                            <h3 id="display-header-name">---</h3>
+                            <p id="display-header-course">---</p>
+                        </div>
+                    </div>
+
+                    <div class="profile-info-grid">
+                        <div class="info-item">
+                            <label>Full Name</label>
+                            <p id="display-fullname">---</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Course</label>
+                            <p id="display-course">---</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Year Level</label>
+                            <p id="display-year">---</p>
+                        </div>
+                        <div class="info-item">
+                            <label>About Me</label>
+                            <p id="display-about">---</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Skills</label>
+                            <p id="display-skills">---</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="profile-edit-mode" style="display: none;">
+                <div class="page-header">
+                    <h2 class="page-title">Edit Profile</h2>
+                </div>
+
+                <div class="card">
+                    <div id="error-alert" class="error-message"></div>
+
+                    <form id="edit-profile-form" onsubmit="saveProfile(event)">
+                        <div class="form-group">
+                            <label for="input-fullname">Full Name *</label>
+                            <input type="text" id="input-fullname" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-course">Course *</label>
+                            <input type="text" id="input-course" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-year">Year Level *</label>
+                            <input type="text" id="input-year" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-about">About *</label>
+                            <textarea id="input-about" class="form-control"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-skills">Skills *</label>
+                            <input type="text" id="input-skills" class="form-control">
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="submit" class="btn btn-save">Save</button>
+                            <button type="button" class="btn btn-cancel" onclick="cancelEdit()">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Student Profile Application</p>
+        </footer>
     </div>
-    <h1 class="user-name">Dann Ryven Carl Roa</h1>
-    <p class="user-title">BS Information Technology Student at Xavier University</p>
-</div>
 
-<nav class="nav-bar">
-    <a href="index.html" class="nav-btn active">Profile</a>
-    <a href="about.html" class="nav-btn">About</a>
-    <a href="skills.html" class="nav-btn">Skills</a>
-    <a href="projects.html" class="nav-btn">Projects</a>
-    <a href="contact.html" class="nav-btn">Contact</a>
-</nav>
-
-<div class="content-container">
-    <div class="card">
-        <h2 class="card-title">Welcome to My Profile!!</h2>
-        <p class="body-text">
-            Hello! I am Dann Ryven Carl Roa, an Information Technology student passionate about software development, database integration, and UI design. This is my student profile, know more about my background, technical expertise, projects, and contact details.
-        </p>
-    </div>
-</div>
-
-<footer class="footer">
-    <p>&copy; 2026 Dann Ryven Carl Roa. All rights reserved.</p>
-</footer>
-
+    <script src="js/script.js"></script>
 </body>
 </html>

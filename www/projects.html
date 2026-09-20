@@ -2,76 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-    <title>Projects - Student Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Showcase</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="header-section">
-    <div class="avatar-wrapper">
-        <img src="img/pfp.png" alt="Dann Ryven Roa Profile Picture">
+    <aside class="sidebar">
+        <div class="brand-section">
+            <span>My Student Profile</span>
+        </div>
+
+        <nav class="nav-bar">
+            <a href="index.html" class="nav-btn">Profile</a>
+            <a href="about.html" class="nav-btn">About</a>
+            <a href="skills.html" class="nav-btn">Skills</a>
+            <a href="projects.html" class="nav-btn active">Projects</a>
+            <a href="contact.html" class="nav-btn">Contact</a>
+        </nav>
+    </aside>
+
+    <div class="main-wrapper">
+        <main class="content-container">
+            <div class="page-header">
+                <h2 class="page-title">Projects Showcase</h2>
+            </div>
+
+            <div class="projects-grid">
+                <div class="card">
+                    <h3 class="card-title">SeekGeek – Lost and Found System</h3>
+                    <p class="body-text">A system to track, record, and locate lost items across a school campus.</p>
+                    <p class="body-text"><strong>Role:</strong> Lead Developer</p>
+                    <div style="margin-top: 10px;">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">SQL</span>
+                        <span class="project-tag">PyQt</span>
+                        <img src="screenshots/seekgeek.png" alt="seekgeek screenshot">
+                    </div>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="card">
+                        <h3 class="card-title">StreamLine X - Music Player</h3>
+                        <p class="body-text">A music player system to play and load music.</p>
+                        <p class="body-text"><strong>Role:</strong> Lead Developer</p>
+                        <div style="margin-top: 10px;">
+                            <span class="project-tag">Java</span>
+                            <img src="screenshots/streamline.png" alt="streamline screenshot">
+                        </div>
+                    </div>
+
+                <div class="card">
+                    <h3 class="card-title">MVC Architecture Calculator</h3>
+                    <p class="body-text">A mathematical calculator application.</p>
+                    <p class="body-text"><strong>Role:</strong> Developer</p>
+                    <div style="margin-top: 10px;">
+                        <span class="project-tag">Java</span>
+                        <span class="project-tag">Swing</span>
+                        <span class="project-tag">OOP</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Student Profile Application</p>
+        </footer>
     </div>
-    <h1 class="user-name">Dann Ryven Carl Roa</h1>
-    <p class="user-title">BS Information Technology Student at Xavier University</p>
-</div>
 
-<nav class="nav-bar">
-    <a href="index.html" class="nav-btn">Profile</a>
-    <a href="about.html" class="nav-btn">About</a>
-    <a href="skills.html" class="nav-btn">Skills</a>
-    <a href="projects.html" class="nav-btn active">Projects</a>
-    <a href="contact.html" class="nav-btn">Contact</a>
-</nav>
-
-<div class="content-container">
-    <h2 class="page-title">Projects Showcase</h2>
-
-    <div class="projects-grid">
-        <div class="card">
-            <h3 class="card-title">SeekGeek – Lost and Found System</h3>
-            <p class="body-text">
-                A system to track, record, and locate lost items across a school campus.
-            </p>
-            <p class="body-text"><strong>Role:</strong> Lead Developer</p>
-            <div>
-                <span class="project-tag">Python</span>
-                <span class="project-tag">SQL</span>
-                <span class="project-tag">PyQt</span>
-                <img src="screenshots/seekgeek.png" alt="seekgeek screenshot">
-            </div>
-        </div>
-
-        <div class="card">
-            <h3 class="card-title">StreamLine X - Music Player </h3>
-            <p class="body-text">
-                A music player system to play and load music.
-            </p>
-            <p class="body-text"><strong>Role:</strong> Lead Developer</p>
-            <div>
-                <span class="project-tag">Java</span>
-                <img src="screenshots/streamline.png" alt="streamline screenshot">
-            </div>
-        </div>
-
-        <div class="card">
-            <h3 class="card-title">MVC Architecture Calculator</h3>
-            <p class="body-text">
-                A mathematical calculator application.
-            </p>
-            <p class="body-text"><strong>Role:</strong> Lead Developer</p>
-            <div>
-                <span class="project-tag">Java</span>
-                <span class="project-tag">MVC Pattern</span>
-                <span class="project-tag">OOP</span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<footer class="footer">
-    <p>&copy; 2026 Dann Ryven Carl Roa. All rights reserved.</p>
-</footer>
-
+    <script src="js/script.js"></script>
 </body>
 </html>

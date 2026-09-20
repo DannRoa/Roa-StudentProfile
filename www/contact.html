@@ -2,54 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-    <title>Contact - Student Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Details</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="header-section">
-    <div class="avatar-wrapper">
-        <img src="img/pfp.png" alt="Dann Ryven Roa Profile Picture">
-    </div>
-    <h1 class="user-name">Dann Ryven Carl Roa</h1>
-    <p class="user-title">BS Information Technology Student at Xavier University</p>
-</div>
-
-<nav class="nav-bar">
-    <a href="index.html" class="nav-btn">Profile</a>
-    <a href="about.html" class="nav-btn">About</a>
-    <a href="skills.html" class="nav-btn">Skills</a>
-    <a href="projects.html" class="nav-btn">Projects</a>
-    <a href="contact.html" class="nav-btn active">Contact</a>
-</nav>
-
-<div class="content-container">
-    <h2 class="page-title">Contact Details</h2>
-
-    <div class="card">
-        <ul class="contact-list">
-            <li><strong>Email:</strong> 20190016950@my.xu.edu.ph</li>
-            <li><strong>School:</strong> Xavier University – Ateneo de Cagayan</li>
-            <li><strong>Location:</strong> Cagayan de Oro City, Philippines</li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/DannRoa" target="_blank">github.com/DannRoa</a></li>
-
-        </ul>
-
-        <div class="edu-item">
-            <strong>Facebook</strong>
-            <p><a href="https://facebook.com" target="_blank">facebook.com/Dann.Roaa</a></p>
+    <aside class="sidebar">
+        <div class="brand-section">
+            <span>My Student Profile</span>
         </div>
-        <div class="edu-item">
-            <strong>Instagram</strong>
-            <p><a href="https://instagram.com" target="_blank">@sqwlv</a></p>
-        </div>
-    </div>
+
+        <nav class="nav-bar">
+            <a href="index.html" class="nav-btn">Profile</a>
+            <a href="about.html" class="nav-btn">About</a>
+            <a href="skills.html" class="nav-btn">Skills</a>
+            <a href="projects.html" class="nav-btn">Projects</a>
+            <a href="contact.html" class="nav-btn active">Contact</a>
+        </nav>
+    </aside>
+    
+    <div class="main-wrapper">
+        <main class="content-container">
+            <div class="page-header">
+                <h2 class="page-title">Contact Details</h2>
+            </div>
+
+            <div class="card">
+                <ul class="contact-list" style="list-style: none;">
+                    <li style="margin-bottom: 12px; font-size: 14px;">
+                        <strong>Full Name:</strong> <span id="contact-page-name">---</span>
+                    </li>
+                    <li style="margin-bottom: 12px; font-size: 14px;">
+                        <strong>School:</strong> Xavier University – Ateneo de Cagayan
+                    </li>
+                    <li style="margin-bottom: 12px; font-size: 14px;">
+                        <strong>Location:</strong> Cagayan de Oro City, Philippines
+                    </li>
+                    <li style="margin-bottom: 12px; font-size: 14px;">
+                        <strong>GitHub:</strong> <a href="https://github.com/DannRoa" target="_blank" style="color: #2563eb;">github.com</a>
+                    </li>
+                    <li style="margin-bottom: 12px; font-size: 14px;">
+                        <strong>Facebook:</strong> <a href="https://facebook.com/Dann.Roaa" target="_blank" style="color: #2563eb;">facebook.com</a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2026 Student Profile Application</p>
+        </footer>
     </div>
 
-<footer class="footer">
-    <p>&copy; 2026 Dann Ryven Carl Roa. All rights reserved.</p>
-</footer>
-
+    <script src="js/script.js"></script>
 </body>
 </html>
