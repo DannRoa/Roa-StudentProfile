@@ -1,54 +1,50 @@
-# Updated Student Profile Application (Edit Profile Feature)- Activity 5
+# Student Profile Application
 
 ## 1. Project Description
-This is my newly updated student profile. I have added a Edit Profile button, and the application displays an editing interface, this allows to modify my profile information.
+This is my **UPDATED** Student Profile Web Application. It has a new feature such as camera integration. You can now update the profile picture by simply Taking a photo or Choosing a photo!
 
 ## 2. Application Pages
-* **Profile (`index.html`)**: This displays my primary student identification, educational background, and this is where the interactive **Edit Profile** feature.
-* **About (`about.html`)**: This features personal background, it is synced with profile edits and educational background.
-* **Skills (`skills.html`)**: This displays my profile skills and dynamically renders individual skill cards based on user inputs.
-* **Projects (`projects.html`)**: This showcases my academic projects.
-* **Contact (`contact.html`)**: This is all my contact details, school information, location, github and social media links.
+* **Profile**: This displays all my information Name, Course, Year lvl, About me, and Skills.
+* **About**: This summarizes my background.
+* **Skills**: This shows my technical skill sets.
+* **Projects**: This features my academic projects I built.
+* **Contact**: This is where all my contact info.
 
 ## 3. Profile Editing
-The **Edit Profile** feature enables user to update informations in real time:
-* Full Name
-* Course
-* Year Level
-* About Me
-* Skills (comma-separated)
+This application features a local data editing. Via "Edit Profile", this updates the page state and persist locally through the browser/WebView **localStorage**.
 
-Updating information instantly syncs and reflects the updated content across the Profile, About and Skills section.
+## 4. Camera Integration
+I used the **cordova-plugin-camera** to interact with the camera hardware.
+* Flow: Tap the protile picture > Choose **Take a Photo** or **Choose a Photo** > Device Camera UI > Capture Photo > Display & Store.
 
-## 4. JavaScript Functionality
-JavaScript (`js/script.js`) powers the application logic:
-* **Form Handling:** This manages switching between View Mode and Edit Mode without page reloads.
-* **Validation:** It ensures required fields are populated before saving, displaying error alerts if validation fails.
-* **Profile Updates:** Re-renders DOM elements dynamically across all pages upon saving.
-* **Dynamic Skill Cards:** Splits comma-separated skills into array items and dynamically generates HTML skill cards for each item on the Skills page.
-* **Save & Cancel:** Saves validated input to persistent storage or reverts changes back to the last saved state when cancelled.
+## 5. Device Feature Integration
+Apache Cordova serves as a bridge between the browser engine and native mobile APIs. JavaScript calls **navigator.camera.getPicture()**, which invokes native Java/Swift drivers to execute native hardware operations.
 
-## 5. Local Data Storage
-The application utilizes `localStorage` (`student_profile_data`) to persist user profile updates locally in the browser/device storage.
+## 6. Image Handling
+The plugin captures raw camera output, converts it to a **DATA_URL** (Base64 JPEG), assigns it directly to **<img id="profile-image">**, and writes the string to **localStorage.setItem('profilePicture', data)**.
 
-## 6. Responsive Design
-I applied @media (min-width: 1500px) rules to switch my layout from a stacked single column into a multi-column desktop grid for wider displays. I also included the meta viewport tag (width=device-width, initial-scale=1) to adjust scaling properly on mobile browsers.
+## 7. Error Handling
+* **Permission Denial / Error**: Triggered callbacks alert user gracefully with actionable text without crashing the app context.
+* **User Cancellation**: Handled gracefully within `onCameraError` by detecting cancellation status codes, keeping existing images active without visual glitches.
 
-## Screenshots
+## 8. Responsive Design
+I applied **@media (min-width: 1500px)** rules to switch my layout from a stacked single column into a multi-column desktop grid for wider displays. I also included the meta viewport tag (width=device-width, initial-scale=1) to adjust scaling properly on mobile browsers.
 
-### Student Profile
-![Profile Page](www/screenshots/studentprofile.png)
+## SCREENSHOTS
 
-### Edit Profile
-![Profile Page](www/screenshots/editprofile.png)
+# Update Profile Picture
+![UpdatedPfp](./screenshots/UpdatedPfp.png)
 
-### Updated Profile
-![Profile Page](www/screenshots/updatedprofile.png)
+# Tap Profile Picture > Choose Take a Photo or Choose a Photo/Change Profile Picture
+![ChangePfp](./screenshots/ChangePfp.png)
 
-### Contact
-![Profile Page](www/screenshots/contact.png)
+# Take a Photo
+![TakePhoto](./screenshots/TakePhoto.png)
 
-## 7. How to Run
+# Upload/Retake/Cancel Photo
+![UploadPhoto](./screenshots/UploadPhoto.png)
+
+## 9. How to Run
 npm install -g cordova
 
 cordova platform add android
@@ -57,7 +53,11 @@ cordova build android
 
 cordova emulate android
 
-#to run in android studio (if not open)
+cordova run android
+
+**Other way** to run  
+
 npx server
 
-# open either local or network !!
+open either local or network !!
+
