@@ -33,16 +33,16 @@ I applied **@media (min-width: 1500px)** rules to switch my layout from a stacke
 ## SCREENSHOTS
 
 # Update Profile Picture
-![UpdatedPfp](./screenshots/UpdatedPfp.png)
+![UpdatedPfp](./www/screenshots/UpdatedPfp.png)
 
 # Tap Profile Picture > Choose Take a Photo or Choose a Photo/Change Profile Picture
-![ChangePfp](./screenshots/ChangePfp.png)
+![ChangePfp](./www/screenshots/ChangePfp.png)
 
 # Take a Photo
-![TakePhoto](./screenshots/TakePhoto.png)
+![TakePhoto](./www/screenshots/TakePhoto.png)
 
 # Upload/Retake/Cancel Photo
-![UploadPhoto](./screenshots/UploadPhoto.png)
+![UploadPhoto](./www/screenshots/UploadPhoto.png)
 
 ## 9. How to Run
 npm install -g cordova
