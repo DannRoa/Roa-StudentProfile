@@ -3,117 +3,133 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: blob: cdvfile: file: *;">
     <title>Student Profile</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <aside class="sidebar">
-        <div class="brand-section">
-            <span>My Student Profile</span>
-        </div>
+<button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
 
-        <nav class="nav-bar">
-            <a href="index.html" class="nav-btn active">Profile</a>
-            <a href="about.html" class="nav-btn">About</a>
-            <a href="skills.html" class="nav-btn">Skills</a>
-            <a href="projects.html" class="nav-btn">Projects</a>
-            <a href="contact.html" class="nav-btn">Contact</a>
-        </nav>
-    </aside>
-
-    <div class="main-wrapper">
-        <main class="content-container">
-
-            <div id="profile-view-mode">
-                <div class="page-header">
-                    <h2 class="page-title">Student Profile</h2>
-                    <button class="btn btn-primary" onclick="openEditMode()">Edit Profile</button>
-                </div>
-
-                <div class="card">
-                    <div class="profile-header-display">
-                        <img src="img/pfp.png" alt="Profile Picture" class="profile-avatar" onerror="this.src='https://via.placeholder.com/90'">
-                        <div class="profile-title-text">
-                            <h3 id="display-header-name">---</h3>
-                            <p id="display-header-course">---</p>
-                        </div>
-                    </div>
-
-                    <div class="profile-info-grid">
-                        <div class="info-item">
-                            <label>Full Name</label>
-                            <p id="display-fullname">---</p>
-                        </div>
-                        <div class="info-item">
-                            <label>Course</label>
-                            <p id="display-course">---</p>
-                        </div>
-                        <div class="info-item">
-                            <label>Year Level</label>
-                            <p id="display-year">---</p>
-                        </div>
-                        <div class="info-item">
-                            <label>About Me</label>
-                            <p id="display-about">---</p>
-                        </div>
-                        <div class="info-item">
-                            <label>Skills</label>
-                            <p id="display-skills">---</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="profile-edit-mode" style="display: none;">
-                <div class="page-header">
-                    <h2 class="page-title">Edit Profile</h2>
-                </div>
-
-                <div class="card">
-                    <div id="error-alert" class="error-message"></div>
-
-                    <form id="edit-profile-form" onsubmit="saveProfile(event)">
-                        <div class="form-group">
-                            <label for="input-fullname">Full Name *</label>
-                            <input type="text" id="input-fullname" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="input-course">Course *</label>
-                            <input type="text" id="input-course" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="input-year">Year Level *</label>
-                            <input type="text" id="input-year" class="form-control">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="input-about">About *</label>
-                            <textarea id="input-about" class="form-control"></textarea>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="input-skills">Skills *</label>
-                            <input type="text" id="input-skills" class="form-control">
-                        </div>
-
-                        <div class="btn-group">
-                            <button type="submit" class="btn btn-save">Save</button>
-                            <button type="button" class="btn btn-cancel" onclick="cancelEdit()">Cancel</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-        </main>
-
-        <footer class="footer">
-            <p>&copy; 2026 Student Profile Application</p>
-        </footer>
+<aside class="sidebar">
+    <div class="brand-section">
+        <span>My Student Profile</span>
     </div>
 
-    <script src="js/script.js"></script>
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-btn active">Profile</a>
+        <a href="about.html" class="nav-btn">About</a>
+        <a href="skills.html" class="nav-btn">Skills</a>
+        <a href="projects.html" class="nav-btn">Projects</a>
+        <a href="contact.html" class="nav-btn">Contact</a>
+    </nav>
+</aside>
+
+<div class="main-wrapper">
+    <main class="content-container">
+
+        <div id="profile-view-mode">
+            <div class="page-header">
+                <h2 class="page-title">Student Profile</h2>
+                <button class="btn btn-primary" onclick="openEditMode()">Edit Profile</button>
+            </div>
+
+            <div class="card">
+                <div class="profile-header-display">
+                    <div class="profile-avatar-container">
+                        <img src="img/pfp.png" id="profile-picture-img" alt="Profile Picture" class="profile-avatar" onclick="openPhotoModal()" onerror="this.src='https://via.placeholder.com/90'">
+
+                        <div id="photo-picker-modal" class="popover-backdrop" onclick="closePhotoModal()">
+                            <div class="popover-card" onclick="event.stopPropagation()">
+                                <h3 class="popover-title">Choose Profile Picture</h3>
+                                <button class="popover-btn" onclick="captureProfilePicture('camera')">Take Photo</button>
+                                <button class="popover-btn" onclick="captureProfilePicture('gallery')">Choose Photo</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-title-text">
+                        <h3 id="display-header-name">---</h3>
+                        <p id="display-header-course">---</p>
+                    </div>
+                </div>
+
+                <div class="profile-info-grid">
+                    <div class="info-item">
+                        <label>Full Name</label>
+                        <p id="display-fullname">---</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Course</label>
+                        <p id="display-course">---</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Year Level</label>
+                        <p id="display-year">---</p>
+                    </div>
+                    <div class="info-item">
+                        <label>About Me</label>
+                        <p id="display-about">---</p>
+                    </div>
+                    <div class="info-item">
+                        <label>Skills</label>
+                        <p id="display-skills">---</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="profile-edit-mode" style="display: none;">
+            <div class="page-header">
+                <h2 class="page-title">Edit Profile</h2>
+            </div>
+
+            <div class="card">
+                <div id="error-alert" class="error-message"></div>
+
+                <form id="edit-profile-form" onsubmit="saveProfile(event)">
+                    <div class="form-group">
+                        <label for="input-fullname">Full Name *</label>
+                        <input type="text" id="input-fullname" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-course">Course *</label>
+                        <input type="text" id="input-course" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-year">Year Level *</label>
+                        <input type="text" id="input-year" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-about">About *</label>
+                        <textarea id="input-about" class="form-control"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-skills">Skills *</label>
+                        <input type="text" id="input-skills" class="form-control">
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-save">Save</button>
+                        <button type="button" class="btn btn-cancel" onclick="cancelEdit()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Student Profile Application</p>
+    </footer>
+</div>
+
+<script src="cordova.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

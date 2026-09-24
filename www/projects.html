@@ -8,6 +8,9 @@
 </head>
 <body>
 
+    <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
     <aside class="sidebar">
         <div class="brand-section">
             <span>My Student Profile</span>
@@ -41,16 +44,15 @@
                     </div>
                 </div>
 
-                <div class="projects-grid">
-                    <div class="card">
-                        <h3 class="card-title">StreamLine X - Music Player</h3>
-                        <p class="body-text">A music player system to play and load music.</p>
-                        <p class="body-text"><strong>Role:</strong> Lead Developer</p>
-                        <div style="margin-top: 10px;">
-                            <span class="project-tag">Java</span>
-                            <img src="screenshots/streamline.png" alt="streamline screenshot">
-                        </div>
+                <div class="card">
+                    <h3 class="card-title">StreamLine X - Music Player</h3>
+                    <p class="body-text">A music player system to play and load music.</p>
+                    <p class="body-text"><strong>Role:</strong> Lead Developer</p>
+                    <div style="margin-top: 10px;">
+                        <span class="project-tag">Java</span>
+                        <img src="screenshots/streamline.png" alt="streamline screenshot">
                     </div>
+                </div>
 
                 <div class="card">
                     <h3 class="card-title">MVC Architecture Calculator</h3>
