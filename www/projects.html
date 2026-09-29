@@ -9,9 +9,9 @@
 <body>
 
     <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
-    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+    <div class="sidebar-overlay hidden" id="sidebarOverlay" onclick="toggleSidebar()"></div>
 
-    <aside class="sidebar">
+    <aside class="sidebar hidden">
         <div class="brand-section">
             <span>My Student Profile</span>
         </div>
@@ -22,6 +22,7 @@
             <a href="skills.html" class="nav-btn">Skills</a>
             <a href="projects.html" class="nav-btn active">Projects</a>
             <a href="contact.html" class="nav-btn">Contact</a>
+            <li><button id="btn-logout" class="drawer-link btn-danger-link" type="button">Log Out</button></li>
         </nav>
     </aside>
 
@@ -68,10 +69,10 @@
         </main>
 
         <footer class="footer">
-            <p>&copy; 2026 Student Profile Application</p>
+            <p>&copy; 2026 Dann Ryven Carl Roa. All rights reserved.</p>
         </footer>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
