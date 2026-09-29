@@ -18,7 +18,6 @@ app.use(cors({
 
 app.use(express.json({ limit: '10mb' }));
 
-// Serve frontend static files from www directory
 app.use(express.static(path.join(__dirname, '../www')));
 
 function authenticateToken(req, res, next) {
@@ -34,7 +33,7 @@ function authenticateToken(req, res, next) {
     });
 }
 
-// LOGIN ENDPOINT
+
 app.post('/api/login', (req, res) => {
     const { studentIdOrEmail, password } = req.body;
 
@@ -67,7 +66,7 @@ app.post('/api/login', (req, res) => {
     );
 });
 
-// GET PROFILE ENDPOINT
+
 app.get('/api/profile', authenticateToken, (req, res) => {
     db.get(
         `SELECT id, student_id, email, name, course, year_level, bio, skills, profile_picture FROM students WHERE id = ?`,
@@ -80,7 +79,7 @@ app.get('/api/profile', authenticateToken, (req, res) => {
     );
 });
 
-// UPDATE PROFILE ENDPOINT
+
 app.put('/api/profile', authenticateToken, (req, res) => {
     const { name, course, year_level, bio, skills, profile_picture } = req.body;
 

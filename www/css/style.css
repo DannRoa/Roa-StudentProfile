@@ -25,7 +25,6 @@ body {
 .alert-success { background-color: #2ecc71; color: white; }
 .alert-error { background-color: #e74c3c; color: white; }
 
-/* Login Screen Layout */
 .login-container {
     display: flex;
     justify-content: center;
@@ -142,7 +141,6 @@ body {
 .btn-danger-link { color: #e53e3e; }
 .drawer-link.active, .drawer-link:hover, .nav-btn.active, .nav-btn:hover { background: #edf2f7; }
 
-/* Cards & Content Elements */
 .profile-card, .card, .skill-card {
     background: #ffffff;
     border-radius: 16px;

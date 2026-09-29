@@ -13,10 +13,10 @@
 
     <content src="index.html" />
 
-    <!-- Fixes "Application Error: connection to server was unsuccessful" by extending startup timeout -->
+  
     <preference name="loadUrlTimeoutValue" value="70000" />
 
-    <!-- Access & Navigation permissions for local webview -->
+   
     <access origin="*" />
     <allow-navigation href="*" />
     <allow-navigation href="http://*/*" />
@@ -24,12 +24,12 @@
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
 
-    <!-- Android Specific Platform Preferences -->
+  
     <platform name="android">
         <preference name="AndroidInsecureFileModeEnabled" value="true" />
         <allow-intent href="market:*" />
 
-        <!-- Enables HTTP traffic for local Express server (http://10.0.2.2:3000) -->
+   
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
             <application android:usesCleartextTraffic="true" />
         </edit-config>

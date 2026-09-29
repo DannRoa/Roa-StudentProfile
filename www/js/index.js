@@ -1,4 +1,4 @@
-// Auto-detect environment: Use 10.0.2.2 for Android Emulator, localhost for Browser / VS Code Preview
+
 const isAndroidEmulator = window.location.href.includes("android_asset") || (window.cordova && cordova.platformId === 'android');
 const API_BASE_URL = isAndroidEmulator ? "http://10.0.2.2:3000/api" : "http://localhost:3000/api";
 const TOKEN_KEY = "jwt_auth_token";
@@ -40,15 +40,15 @@ function initApp() {
         }
     }
 
-    // Attach Login Handlers
+
     const loginForm = document.getElementById('login-form');
     if (loginForm) loginForm.onsubmit = handleLogin;
 
-    // Attach Logout Handler
+  
     const logoutBtn = document.getElementById('btn-logout');
     if (logoutBtn) logoutBtn.onclick = handleLogout;
 
-    // Attach Edit Toggle Handlers
+  
     const toggleEditBtn = document.getElementById('btn-toggle-edit');
     if (toggleEditBtn) toggleEditBtn.onclick = openEditMode;
 
@@ -58,7 +58,7 @@ function initApp() {
     const editForm = document.getElementById('edit-profile-form');
     if (editForm) editForm.onsubmit = saveProfile;
 
-    // Attach Sidebar Drawer Handlers
+   
     const menuBtn = document.getElementById('btn-menu');
     if (menuBtn) menuBtn.onclick = toggleSidebar;
 
@@ -68,7 +68,7 @@ function initApp() {
     const overlay = document.getElementById('drawer-overlay') || document.getElementById('sidebarOverlay');
     if (overlay) overlay.onclick = toggleSidebar;
 
-    // Attach Avatar Tap Handler for Photo Modal
+
     const avatarContainer = document.getElementById('avatar-container');
     if (avatarContainer) {
         avatarContainer.onclick = openPhotoModal;
@@ -83,7 +83,7 @@ function initApp() {
     const choosePhotoBtn = document.getElementById('btn-choose-photo');
     if (choosePhotoBtn) choosePhotoBtn.onclick = () => captureProfilePicture('gallery');
 
-    // Attach File Input Handler for Browser Testing
+  
     const browserFileInput = document.getElementById('browser-file-input');
     if (browserFileInput) {
         browserFileInput.onchange = handleBrowserFileSelect;
@@ -102,9 +102,7 @@ function navigateToProfile() {
     }
 }
 
-// -------------------------------------------------------------
-// AUTHENTICATION & VIEW NAVIGATION
-// -------------------------------------------------------------
+
 function showLoginScreen() {
     const loginSection = document.getElementById('login-section');
     const appWrapper = document.getElementById('app-wrapper');
@@ -182,9 +180,6 @@ function showLoginError(msg) {
     }
 }
 
-// -------------------------------------------------------------
-// DATABASE CRUD OPERATIONS
-// -------------------------------------------------------------
 function fetchProfileFromDB() {
     const token = localStorage.getItem(TOKEN_KEY);
 
@@ -316,9 +311,6 @@ function saveProfile(event) {
     });
 }
 
-// -------------------------------------------------------------
-// CAMERA INTEGRATION & DATABASE PERSISTENCE
-// -------------------------------------------------------------
 function captureProfilePicture(mode) {
     closePhotoModal();
 
@@ -397,9 +389,6 @@ function onCameraError(message) {
     alert("Camera error: " + message);
 }
 
-// -------------------------------------------------------------
-// UI TOGGLES & HELPER FUNCTIONS
-// -------------------------------------------------------------
 function toggleSidebar() {
     const sidebar = document.getElementById('sidebar-drawer') || document.querySelector('.sidebar');
     const overlay = document.getElementById('drawer-overlay') || document.getElementById('sidebarOverlay');
