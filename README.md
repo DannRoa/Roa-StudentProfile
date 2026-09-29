@@ -128,14 +128,14 @@ cordova run android
 # Login Page
 ![LoginPage](./www/screenshots/LoginPage.png)
 # Sucessful login & Student Profile
-![SucessfulLogin](.\www\screenshots\SuccessfullLogin.png)
+![SucessfullLogin](./www/screenshots\SuccessfullLogin.png)
 # Edit Profile
-![EditProfile](.\www\screenshots\EditProfile.png)
+![EditProfile](./www/screenshots/EditProfile.png)
 # Updated Profile
-![UpdatedProfile](.\www\screenshots\UpdatedProfile.png)
+![UpdatedProfile](./www/screenshots/UpdatedProfile.png)
 # Camera
-![ProfilePicture](.\www\screenshots\ProfilePicture.png)
+![ProfilePicture](./www/screenshots/ProfilePicture.png)
 # Logout 
-![Logout](.\www\screenshots\Logout.png)
+![Logout](./www/screenshots/Logout.png)
 # Database Functionality
-![databasefunctionality](.\www\screenshots\databasefunctionality.png)
+![databasefunctionality](./www/screenshots/databasefunctionality.png)
